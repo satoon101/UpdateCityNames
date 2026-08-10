@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="427135e8-b825-43a5-9100-aea6ddf04ed0" version="1">
+    <Properties>
+        <Name>City Name Updates</Name>
+        <Description>Updates City names to put names in the correct order.</Description>
+        <Teaser>Update city names</Teaser>
+        <Authors>satoon101</Authors>
+        <CompatibleVersions>2.0</CompatibleVersions>
+    </Properties>
+
+    <InGameActions>
+        <AddGameplayScripts id="CityNameUpdateScript">
+            <File>scripts/Gameplay/UpdateCityNames.lua</File>
+        </AddGameplayScripts>
+    </InGameActions>
+
+    <Files>
+        <File>scripts/Gameplay/UpdateCityNames.lua</File>
+    </Files>
+</Mod>
