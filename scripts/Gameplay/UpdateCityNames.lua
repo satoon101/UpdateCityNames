@@ -20,7 +20,7 @@ local function FindCurrentCityNames()
     end
 end
 
-Events.LoadScreenClose.Add(FindCurrentCityNames)
+Events.LoadGameViewStateDone.Add(FindCurrentCityNames)
 Events.TurnBegin.Add(FindCurrentCityNames)
 
 local function UpdateCityName(playerID, cityID)
@@ -123,6 +123,6 @@ local function GatherCityNames()
     end
 end
 
-Events.LoadScreenClose.Add(GatherCityNames)
+Events.LoadGameViewStateDone.Add(GatherCityNames)
 
 print("=== Update City Names (Gameplay) Loaded ===")
