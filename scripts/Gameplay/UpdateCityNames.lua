@@ -29,13 +29,11 @@ local function UpdateCityName(playerID, cityID)
     end
 
     if next(CityNames) == nil then
-        print("Array is empty.")
         return
     end
 
     local player = Players[playerID]
     if not player:IsHuman() then
-        print("Player is not human.")
         return
     end
 
@@ -44,20 +42,17 @@ local function UpdateCityName(playerID, cityID)
     local city = cities:FindID(cityID)
     local plotKey = city:GetX() .. "," .. city:GetY()
     if CurrentCityNames[plotKey] then
-        print("Not updating name")
         return
     end
 
     local city_count = cities:GetCount()
     local city_name = CityNames[city_count]
     if city_name == nil then
-        print("No city name found.")
         return
     end
 
     local current_name = city:GetName()
     if current_name == city_name then
-        print("No need to set name, already set to: " .. city_name)
         return
     end
 
@@ -103,7 +98,6 @@ local function GatherCityNames()
             count = count + 1
         end
         if row.CivilizationType == civName then
-            CityNames[count] = row.CityName
             count = count + 1
         end
     end
